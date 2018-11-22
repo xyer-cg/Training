@@ -2,12 +2,16 @@ package sanjay;
 
 public class Problem15
 {
+	@SuppressWarnings ("resource")
 	public static void main (String [] args)
 	{
-		if (args.length == 0) return;
-		if (!args [0].matches ("[\\(\\)]+")) return;
-		System.out.println ("Solution k = " + solution (args [0]));
-		System.out.println ("Solution2 k = " + solution2 (args [0]));
+		// if (args.length == 0) return;
+
+		String input = new java.util.Scanner (System.in).nextLine ();
+		if (!input.matches ("[\\(\\)]+")) return;
+		
+		System.out.println ("Solution k = " + solution (input));
+		System.out.println ("Solution2 k = " + solution2 (input));
 	}
 
 	public static int solution (String s)
